@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+</head>
+<body>
+    <h1>Ваши файлы</h1>
+    <ul>
+        {% for file in files %}
+        <li>
+            <strong>{{ file.filename }}</strong> - Хеш: {{ file.filehash }}
+        </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{{ url_for('index') }}">На главную</a></p>
+</body>
+</html>
